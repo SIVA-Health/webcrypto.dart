@@ -3037,33 +3037,27 @@ class BoringSsl {
 
   ffi.Pointer<ASN1_ITEM_st> get X509_it => _X509_it;
 
-  late final ffi.Pointer<ffi.Int32> ___mb_cur_max =
-      _lookup<ffi.Int32>('__mb_cur_max');
+  late final ffi.Pointer<ffi.Int32> ___daylight =
+      _lookup<ffi.Int32>('__daylight');
 
-  int get __mb_cur_max => ___mb_cur_max.value;
+  int get __daylight => ___daylight.value;
 
-  set __mb_cur_max(int value) => ___mb_cur_max.value = value;
+  set __daylight(int value) => ___daylight.value = value;
 
-  late final ffi.Pointer<ffi.Pointer<FILE>> ___stderrp =
-      _lookup<ffi.Pointer<FILE>>('__stderrp');
+  late final ffi.Pointer<ffi.Int64> ___timezone =
+      _lookup<ffi.Int64>('__timezone');
 
-  ffi.Pointer<FILE> get __stderrp => ___stderrp.value;
+  int get __timezone => ___timezone.value;
 
-  set __stderrp(ffi.Pointer<FILE> value) => ___stderrp.value = value;
+  set __timezone(int value) => ___timezone.value = value;
 
-  late final ffi.Pointer<ffi.Pointer<FILE>> ___stdinp =
-      _lookup<ffi.Pointer<FILE>>('__stdinp');
+  late final ffi.Pointer<ffi.Pointer<ffi.Pointer<ffi.Int8>>> ___tzname =
+      _lookup<ffi.Pointer<ffi.Pointer<ffi.Int8>>>('__tzname');
 
-  ffi.Pointer<FILE> get __stdinp => ___stdinp.value;
+  ffi.Pointer<ffi.Pointer<ffi.Int8>> get __tzname => ___tzname.value;
 
-  set __stdinp(ffi.Pointer<FILE> value) => ___stdinp.value = value;
-
-  late final ffi.Pointer<ffi.Pointer<FILE>> ___stdoutp =
-      _lookup<ffi.Pointer<FILE>>('__stdoutp');
-
-  ffi.Pointer<FILE> get __stdoutp => ___stdoutp.value;
-
-  set __stdoutp(ffi.Pointer<FILE> value) => ___stdoutp.value = value;
+  set __tzname(ffi.Pointer<ffi.Pointer<ffi.Int8>> value) =>
+      ___tzname.value = value;
 
   late final ffi.Pointer<ffi.Int32> _daylight = _lookup<ffi.Int32>('daylight');
 
@@ -3071,33 +3065,26 @@ class BoringSsl {
 
   set daylight(int value) => _daylight.value = value;
 
-  late final ffi.Pointer<ffi.Int32> _getdate_err =
-      _lookup<ffi.Int32>('getdate_err');
+  late final ffi.Pointer<ffi.Pointer<_IO_FILE>> _stderr =
+      _lookup<ffi.Pointer<_IO_FILE>>('stderr');
 
-  int get getdate_err => _getdate_err.value;
+  ffi.Pointer<_IO_FILE> get stderr => _stderr.value;
 
-  set getdate_err(int value) => _getdate_err.value = value;
+  set stderr(ffi.Pointer<_IO_FILE> value) => _stderr.value = value;
 
-  late final ffi.Pointer<ffi.Pointer<ffi.Int8>> _suboptarg =
-      _lookup<ffi.Pointer<ffi.Int8>>('suboptarg');
+  late final ffi.Pointer<ffi.Pointer<_IO_FILE>> _stdin =
+      _lookup<ffi.Pointer<_IO_FILE>>('stdin');
 
-  ffi.Pointer<ffi.Int8> get suboptarg => _suboptarg.value;
+  ffi.Pointer<_IO_FILE> get stdin => _stdin.value;
 
-  set suboptarg(ffi.Pointer<ffi.Int8> value) => _suboptarg.value = value;
+  set stdin(ffi.Pointer<_IO_FILE> value) => _stdin.value = value;
 
-  late final ffi.Pointer<ffi.Pointer<ffi.Pointer<ffi.Int8>>> _sys_errlist =
-      _lookup<ffi.Pointer<ffi.Pointer<ffi.Int8>>>('sys_errlist');
+  late final ffi.Pointer<ffi.Pointer<_IO_FILE>> _stdout =
+      _lookup<ffi.Pointer<_IO_FILE>>('stdout');
 
-  ffi.Pointer<ffi.Pointer<ffi.Int8>> get sys_errlist => _sys_errlist.value;
+  ffi.Pointer<_IO_FILE> get stdout => _stdout.value;
 
-  set sys_errlist(ffi.Pointer<ffi.Pointer<ffi.Int8>> value) =>
-      _sys_errlist.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _sys_nerr = _lookup<ffi.Int32>('sys_nerr');
-
-  int get sys_nerr => _sys_nerr.value;
-
-  set sys_nerr(int value) => _sys_nerr.value = value;
+  set stdout(ffi.Pointer<_IO_FILE> value) => _stdout.value = value;
 
   late final ffi.Pointer<ffi.Int64> _timezone = _lookup<ffi.Int64>('timezone');
 
@@ -3324,8 +3311,6 @@ const int EVP_PKEY_EC = 408;
 
 const int EVP_PKEY_RSA = 6;
 
-class FILE extends ffi.Opaque {}
-
 const int HKDF_R_OUTPUT_TOO_LARGE = 100;
 
 /// Private functions
@@ -3355,16 +3340,13 @@ const int RSA_PKCS1_PADDING = 1;
 
 const int RSA_PKCS1_PSS_PADDING = 6;
 
-class __sFILEX extends ffi.Opaque {}
+class _IO_FILE extends ffi.Opaque {}
 
-class __sbuf extends ffi.Struct {
-  external ffi.Pointer<ffi.Uint8> _base;
+class _IO_codecvt extends ffi.Opaque {}
 
-  @ffi.Int32()
-  external int _size;
-}
+class _IO_marker extends ffi.Opaque {}
 
-class _opaque_pthread_rwlock_t extends ffi.Opaque {}
+class _IO_wide_data extends ffi.Opaque {}
 
 /// CRYPTO ByteBuilder.
 ///

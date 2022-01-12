@@ -1,6 +1,8 @@
 name: WebCryptoDartDL
 description: 'Bindings to src/webcrypto_dart_dl.h.'
 output: 'lib/src/boringssl/bindings/generated_bindings.dart'
+llvm-path:
+  - /usr/lib/llvm-13/
 headers:
   entry-points:
     - src/webcrypto_dart_dl.h

@@ -1,6 +1,8 @@
 name: BoringSsl
 description: 'Bindings to BoringSSL.'
 output: 'lib/src/third_party/boringssl/generated_bindings.dart'
+llvm-path:
+  - /usr/lib/llvm-13/
 headers:
   entry-points:
     - 'third_party/boringssl/src/include/openssl/*.h'

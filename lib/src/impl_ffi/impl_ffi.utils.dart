@@ -35,9 +35,9 @@ void _attachFinalizerEVP_PKEY(ffi.Pointer<EVP_PKEY> key) {
     // will prioritize freeing them.
     4096,
   );
-  if (ret != 1) {
-    throw AssertionError('package:webcrypto failed to attached finalizer');
-  }
+  // if (ret != 1) {
+  //   throw AssertionError('package:webcrypto failed to attached finalizer');
+  // }
 }
 
 /// Create an [ssl.EVP_PKEY] with finalizer attached.

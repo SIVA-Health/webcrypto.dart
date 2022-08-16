@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import 'dart:convert';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/lipsum.dart';
@@ -45,8 +45,7 @@ void runTests({TestFn test = test}) {
   test('SHA-384: "hello-world"', () async {
     final bytes = await Hash.sha384.digestStream(_utf8Stream('hello-world'));
     final hash = base64Encode(bytes);
-    check(hash ==
-        'UT6f7WCFp32YJnp1is4l/ZYnOeQKpE8xjmdkLOwZ3nIP+tmT2aMRFQGJomjVf5cE');
+    check(hash == 'UT6f7WCFp32YJnp1is4l/ZYnOeQKpE8xjmdkLOwZ3nIP+tmT2aMRFQGJomjVf5cE');
   });
 
   test('SHA-512: "hello-world"', () async {
@@ -83,8 +82,7 @@ void runTests({TestFn test = test}) {
     final h = Hash.sha384;
     final bytes = await h.digestStream(_utf8Stream(libsum));
     final hash = base64Encode(bytes);
-    check(hash ==
-        'O9csqdeyd4eYukVJ6L8tYrqmvjeBRL8vn/I8Ggl3F2vneuF7Xr6YkWDzw1zCLTDv');
+    check(hash == 'O9csqdeyd4eYukVJ6L8tYrqmvjeBRL8vn/I8Ggl3F2vneuF7Xr6YkWDzw1zCLTDv');
     check(hash ==
         base64Encode(
           await h.digestStream(fibonacciChunkedStream(utf8.encode(libsum))),

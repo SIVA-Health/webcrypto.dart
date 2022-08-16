@@ -16,7 +16,7 @@ import 'dart:async';
 import 'dart:typed_data';
 import 'dart:convert';
 import 'package:webcrypto/webcrypto.dart';
-import 'package:test/test.dart' as t;
+import 'package:flutter_test/flutter_test.dart' as t;
 
 /// Log [value] from tests.
 void log(Object value) => print(value);
@@ -30,8 +30,7 @@ const _dumpData = bool.fromEnvironment('webcrypto.dump', defaultValue: false);
 /// This can also be overwritten by manually tweaking the [_dumpData] variable.
 void dump(Map data) {
   if (_dumpData) {
-    final json =
-        JsonEncoder.withIndent('  ').convert(data).replaceAll('\n', '\n| ');
+    final json = JsonEncoder.withIndent('  ').convert(data).replaceAll('\n', '\n| ');
     log('| $json');
   }
 }

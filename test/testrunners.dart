@@ -14,7 +14,7 @@
 
 import 'utils/utils.dart';
 import 'utils/testrunner.dart' show TestRunner;
-import 'package:test/test.dart' show test;
+import 'package:flutter_test/flutter_test.dart' show test;
 
 // TestRunner implementations
 import 'webcrypto/aescbc_test.dart' as aescbc_test;

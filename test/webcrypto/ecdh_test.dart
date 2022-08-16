@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';
@@ -40,8 +40,7 @@ final runner = TestRunner.asymmetric<EcdhPrivateKey, EcdhPublicKey>(
       EcdhPrivateKey.importPkcs8Key(keyData, curveFromJson(keyImportParams))),
   exportPrivatePkcs8Key: nullOnFirefox((key) => key.exportPkcs8Key()),
   importPrivateJsonWebKey: (jsonWebKeyData, keyImportParams) =>
-      EcdhPrivateKey.importJsonWebKey(
-          jsonWebKeyData, curveFromJson(keyImportParams)),
+      EcdhPrivateKey.importJsonWebKey(jsonWebKeyData, curveFromJson(keyImportParams)),
   exportPrivateJsonWebKey: (key) => key.exportJsonWebKey(),
   importPublicRawKey: (keyData, keyImportParams) =>
       EcdhPublicKey.importRawKey(keyData, curveFromJson(keyImportParams)),
@@ -50,8 +49,7 @@ final runner = TestRunner.asymmetric<EcdhPrivateKey, EcdhPublicKey>(
       EcdhPublicKey.importSpkiKey(keyData, curveFromJson(keyImportParams)),
   exportPublicSpkiKey: (key) => key.exportSpkiKey(),
   importPublicJsonWebKey: (jsonWebKeyData, keyImportParams) =>
-      EcdhPublicKey.importJsonWebKey(
-          jsonWebKeyData, curveFromJson(keyImportParams)),
+      EcdhPublicKey.importJsonWebKey(jsonWebKeyData, curveFromJson(keyImportParams)),
   exportPublicJsonWebKey: (key) => key.exportJsonWebKey(),
   generateKeyPair: (generateKeyPairParams) async {
     // Use public / private keys from two different pairs, as if they had been

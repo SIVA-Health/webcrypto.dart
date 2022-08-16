@@ -14,7 +14,7 @@
 
 import 'dart:typed_data';
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';

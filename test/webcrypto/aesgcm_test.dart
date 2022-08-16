@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';
@@ -69,8 +69,7 @@ void main() {
 // ignore_for_file: prefer_single_quotes
 final _testData = [
   {
-    "name":
-        "A128GCM/iv-only generated on boringssl/linux at 2020-01-21T22:52:27",
+    "name": "A128GCM/iv-only generated on boringssl/linux at 2020-01-21T22:52:27",
     "privateRawKeyData": "3nle6RpFx77jwrksoNUb1Q==",
     "privateJsonWebKeyData": {
       "kty": "oct",

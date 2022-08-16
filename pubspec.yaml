@@ -18,12 +18,12 @@ description: Cross-platform implementation of Web Cryptography APIs for Flutter.
 homepage: https://github.com/google/webcrypto.dart
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
-  flutter: '>=2.0.0'
+  sdk: ">=2.17.0 <3.0.0"
+  flutter: ">=1.17.0"
 
 dependencies:
-  ffi: ^1.1.2
-  js: ^0.6.3
+  ffi: ^2.0.1
+  js: ^0.6.4
   meta: ^1.7.0
   # Needed for `lib/src/flutter/webcrypto_plugin.dart` which allows boiler-plate
   # in `flutter.plugin.platforms.web` added below.
@@ -33,10 +33,9 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  ffigen: ^2.3.0
-  test: ^1.17.12
-  yaml: ^3.1.0
-  lints: ^1.0.1
+  ffigen: ^6.0.1
+  yaml: ^3.1.1
+  lints: ^2.0.0
   flutter_test:
     sdk: flutter
 

@@ -14,7 +14,7 @@
 
 import 'dart:typed_data';
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';
@@ -119,8 +119,7 @@ final _testData = [
     }
   },
   {
-    "name":
-        "SHA-256/200/2048 generated on boringssl/linux at 2020-01-26T20:51:19",
+    "name": "SHA-256/200/2048 generated on boringssl/linux at 2020-01-26T20:51:19",
     "privateRawKeyData": "yyMsKhVOxc9PHza86irjtXRi8UALVNFG",
     "derivedBits":
         "X8ErmooBkBYk+OtYy4KheRfqUMgTo8r9ZhxN/A5jpcMJ3LPRLrwBLLo12gFlfp/O9G68pGaqM5+dZ1AseHxCDRU9cUh5PHtP8VoihXT4+xjLroAS2C8QaXAdn7gpfSwZhORmUPIeilWtfp2ylD9qpChrCw3uIN23pfDQyGL516API+HEguWuk0JRBZQqAhtuuLN2fWjXXtEFTXBaeKqdKxguog9FNzjfjvBXc9hdbbBkr7e49nlV67SB+EbzbcV0sPL76cIXYW/97BdYcmR9wYHaFHZy0PQt0p0YglVtS1XzVYTX+qpi76gZvRV199NQTotQ0F0Lv3qljak/Am4Bjg==",
@@ -148,8 +147,7 @@ final _testData = [
     }
   },
   {
-    "name":
-        "SHA-256/200/2048 generated on firefox/linux at 2020-01-26T20:51:34",
+    "name": "SHA-256/200/2048 generated on firefox/linux at 2020-01-26T20:51:34",
     "privateRawKeyData": "t2CEEuWQLzK8X4/VdvWSXeM0rs7CqEoZ",
     "derivedBits":
         "hYwPZLpZLY/85GYy5dmgDFlaAGVDOc6a+185CzHT9lzmbvyr/va0BdetlaKlLp0oDEMFk/T+pbTGiXbO77w72MAZ4Ex5TEEwHS1SbCLBl3eNpww2Hp3GNbR99XytzRJXspTVCHcI4myH77XSroqLHmrcMOBG+hzPPldeGAIot884m+xE1sSQ2tciwr5BGaDYm70vHoRrrA7V/DMLcBVwe0vLXdTYRJ+MJA7m49AcvMNIHuG4IcFH8YjBQJzpBr9AAvoWrjCi2aShL9fiUICciSo/xHWMhwxmd1ey0zQHTR+pRgJvn2cfWQ8j2yvM/2brZZ4DXvLqsMspRsANNeSPYQ==",
@@ -163,8 +161,7 @@ final _testData = [
     }
   },
   {
-    "name":
-        "SHA-256/2000/256 generated on boringssl/linux at 2020-01-26T20:53:30",
+    "name": "SHA-256/2000/256 generated on boringssl/linux at 2020-01-26T20:53:30",
     "privateRawKeyData":
         "4XkbSK7qF2Y8VJRFPK9IKwlsaESTJakBb6W4iRzh0tUz0vRK1vPtKpbXUWyYYdVmgIsJyErlj6Bs7fBkk4emxMHiibHBtITzB4cxTv445WFbxZ0z6U1133XKIw==",
     "derivedBits": "X6TgJrH/g3gdofA8uXIUNjc3vW/aS+8Ujcl5Hwf2P7k=",
@@ -190,8 +187,7 @@ final _testData = [
     }
   },
   {
-    "name":
-        "SHA-256/2000/256 generated on firefox/linux at 2020-01-26T20:53:43",
+    "name": "SHA-256/2000/256 generated on firefox/linux at 2020-01-26T20:53:43",
     "privateRawKeyData":
         "P9W0f/ILv4mv45XGQh5DRy5anxkPqjVa6aPbEIgUvUsVqR0XwKlpCGYDkOuEeCKSemUC39ucWCEs1i/pqIy7mXSCpKvxVFKxCaAglSlBGZrCHD4jbxaGuTdelg==",
     "derivedBits": "gWWgqU5qtNl9UFTdGBAYThixXoYDbnxkXbQLSuD4zys=",

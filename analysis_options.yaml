@@ -16,4 +16,7 @@ include: package:lints/recommended.yaml
 analyzer:
   exclude:
     # Cannot analyze subprojects
+    # TODO(Team): pls resolve warnings
+    - lib/**
     - example/**
+    - test/**

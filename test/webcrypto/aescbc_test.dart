@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';
@@ -99,8 +99,7 @@ final _testData = [
       "k": "o4QOi2ASkWTf5W9tCLSkAw"
     },
     "plaintext": "dWUgc2VtcGVyIGp1c3RvIG9yY2ksIHZpdGFlCnZlbmVuYXRp",
-    "ciphertext":
-        "Apckyp9bxHAVpo0+MAlAgtcWAa6JZz9OdT/WGskcTVd/e542dAZJ88byiZ2So+2U",
+    "ciphertext": "Apckyp9bxHAVpo0+MAlAgtcWAa6JZz9OdT/WGskcTVd/e542dAZJ88byiZ2So+2U",
     "importKeyParams": {},
     "encryptDecryptParams": {"iv": "AAEECRAZJDFAUWR5kKnE4Q=="}
   },
@@ -113,8 +112,7 @@ final _testData = [
       "alg": "A256CBC",
       "k": "b0y6-MqS0ShCvZiloJJAeG8ei8tVIN3OCYIdn1FN74o"
     },
-    "plaintext":
-        "Z2V0IGZlbGlzLiBWZXN0aWJ1bHVtIHZlc3RpYnVsdW0gbHVjdHVzIGRpYW0sIHF1aQ==",
+    "plaintext": "Z2V0IGZlbGlzLiBWZXN0aWJ1bHVtIHZlc3RpYnVsdW0gbHVjdHVzIGRpYW0sIHF1aQ==",
     "ciphertext":
         "V8tNAuLWzVMZElQGnNysrBdH6BSRmL1Ui5v5OE6iAqkeI9So2RriGhWbkko9YMtz58qwW70EmVCA4wCM29zAjg==",
     "importKeyParams": {},
@@ -142,8 +140,7 @@ final _testData = [
       "k": "1mfFKdMKMTCHSbor0ZzCLJJoUR5VUZ6Io-ypUuBeAWI"
     },
     "plaintext": "c2NlIGEgdmVsaXQgY29tbW9kbywgbGFvcmVldCBuaXNsIGV0LA==",
-    "ciphertext":
-        "pjuEkxaRURuXYdb4vMgTJboTw9aFYOYYS10AoqJx4QYb3wDg6yzCec/LpGpqaPXY",
+    "ciphertext": "pjuEkxaRURuXYdb4vMgTJboTw9aFYOYYS10AoqJx4QYb3wDg6yzCec/LpGpqaPXY",
     "importKeyParams": {},
     "encryptDecryptParams": {"iv": "AAEECRAZJDFAUWR5kKnE4Q=="}
   },

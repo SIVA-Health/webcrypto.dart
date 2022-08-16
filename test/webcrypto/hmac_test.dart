@@ -15,7 +15,7 @@
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 final runner = TestRunner.symmetric<HmacSecretKey>(
   algorithm: 'HMAC',
@@ -25,8 +25,7 @@ final runner = TestRunner.symmetric<HmacSecretKey>(
   importPrivatePkcs8Key: null, // not supported
   exportPrivatePkcs8Key: null,
   importPrivateJsonWebKey: (jsonWebKeyData, keyImportParams) =>
-      HmacSecretKey.importJsonWebKey(
-          jsonWebKeyData, hashFromJson(keyImportParams)),
+      HmacSecretKey.importJsonWebKey(jsonWebKeyData, hashFromJson(keyImportParams)),
   exportPrivateJsonWebKey: (key) => key.exportJsonWebKey(),
   generateKey: (generateKeyPairParams) => HmacSecretKey.generateKey(
     hashFromJson(generateKeyPairParams),
@@ -34,10 +33,8 @@ final runner = TestRunner.symmetric<HmacSecretKey>(
   ),
   signBytes: (key, data, signParams) => key.signBytes(data),
   signStream: (key, data, signParams) => key.signStream(data),
-  verifyBytes: (key, signature, data, verifyParams) =>
-      key.verifyBytes(signature, data),
-  verifyStream: (key, signature, data, verifyParams) =>
-      key.verifyStream(signature, data),
+  verifyBytes: (key, signature, data, verifyParams) => key.verifyBytes(signature, data),
+  verifyStream: (key, signature, data, verifyParams) => key.verifyStream(signature, data),
   testData: _testData,
 );
 
@@ -116,8 +113,7 @@ final _testData = [
     },
     "plaintext":
         "dCBuaXNsLiBQcmFlc2VudCBlbmltIG1hZ25hLApyaG9uY3VzIHF1aXMgY29uZGltZW50dW0gYWMs",
-    "signature":
-        "Dc6Jiw5A+92IB4RAJh96Y9acoyZgrx75FmFa2Ye3+h+DihU+qiUyTXiuTOrSi53g",
+    "signature": "Dc6Jiw5A+92IB4RAJh96Y9acoyZgrx75FmFa2Ye3+h+DihU+qiUyTXiuTOrSi53g",
     "importKeyParams": {"hash": "sha-384", "length": 512},
     "signVerifyParams": {}
   },
@@ -132,8 +128,7 @@ final _testData = [
           "pBLSDxNWRIpFxODNstC-Cd-n-e0ABp38wwbALA5o-wJ-r5mgIrLChbKoWmt3zVMWEjDR_qBaHsTuG7kVmnOW9w"
     },
     "plaintext": "aXQgcXVpcy4gQ3U=",
-    "signature":
-        "CZCQz8y18FtWhyzxofYSk47cV/KJjFESt4dR+luhPrMop5cW7QmJTreRLFM4RTKy",
+    "signature": "CZCQz8y18FtWhyzxofYSk47cV/KJjFESt4dR+luhPrMop5cW7QmJTreRLFM4RTKy",
     "importKeyParams": {"hash": "sha-384", "length": 512},
     "signVerifyParams": {}
   },
@@ -148,20 +143,14 @@ final _testData = [
           "xJAxNE2TmomHP-xMSi2hEAHjTPTPNKBACiepH3ijfglWbIVFP3wckj7bQ7QSXvCklewu6ao3HeNUu_kVvdDnJg"
     },
     "plaintext": "YyBsYW9yZWV0LCBsZQ==",
-    "signature":
-        "bhnHVnnqoe1L9T7zHImrjDH4B4YVz+Qrvdfxw1eutajcDu2Plhr49B9GXNArXoS8",
+    "signature": "bhnHVnnqoe1L9T7zHImrjDH4B4YVz+Qrvdfxw1eutajcDu2Plhr49B9GXNArXoS8",
     "importKeyParams": {"hash": "sha-384", "length": 512},
     "signVerifyParams": {}
   },
   {
     "name": "HS512/37 generated on boringssl/linux at 2020-01-17T17:23:41",
     "privateRawKeyData": "kuk/KhA=",
-    "privateJsonWebKeyData": {
-      "kty": "oct",
-      "use": "sig",
-      "alg": "HS512",
-      "k": "kuk_KhA"
-    },
+    "privateJsonWebKeyData": {"kty": "oct", "use": "sig", "alg": "HS512", "k": "kuk_KhA"},
     "plaintext":
         "bmEgaWQgbGliZXJvIGV1aXNtb2QKYWxpcXVldC4gTW9yYmkgYWNjdW1zYW4gZ3JhdmlkYSBkb2xvciwgbmVjIGVnZXN0YXMg",
     "signature":

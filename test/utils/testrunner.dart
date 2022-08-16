@@ -16,7 +16,7 @@ import 'dart:convert';
 import 'dart:math';
 import 'dart:async';
 
-import 'package:test/test.dart' show test;
+import 'package:flutter_test/flutter_test.dart' show test;
 import 'package:meta/meta.dart';
 import 'package:webcrypto/webcrypto.dart';
 import 'detected_runtime.dart';
@@ -99,12 +99,10 @@ class _TestCase {
       generateKeyParams: _optionalStringMapDecode(json['generateKeyParams']),
       privateRawKeyData: _optionalBase64Decode(json['privateRawKeyData']),
       privatePkcs8KeyData: _optionalBase64Decode(json['privatePkcs8KeyData']),
-      privateJsonWebKeyData:
-          _optionalStringMapDecode(json['privateJsonWebKeyData']),
+      privateJsonWebKeyData: _optionalStringMapDecode(json['privateJsonWebKeyData']),
       publicRawKeyData: _optionalBase64Decode(json['publicRawKeyData']),
       publicSpkiKeyData: _optionalBase64Decode(json['publicSpkiKeyData']),
-      publicJsonWebKeyData:
-          _optionalStringMapDecode(json['publicJsonWebKeyData']),
+      publicJsonWebKeyData: _optionalStringMapDecode(json['publicJsonWebKeyData']),
       plaintext: _optionalBase64Decode(json['plaintext']),
       signature: _optionalBase64Decode(json['signature']),
       ciphertext: _optionalBase64Decode(json['ciphertext']),
@@ -112,8 +110,7 @@ class _TestCase {
       derivedLength: json['derivedLength'] as int?,
       importKeyParams: _optionalStringMapDecode(json['importKeyParams']),
       signVerifyParams: _optionalStringMapDecode(json['signVerifyParams']),
-      encryptDecryptParams:
-          _optionalStringMapDecode(json['encryptDecryptParams']),
+      encryptDecryptParams: _optionalStringMapDecode(json['encryptDecryptParams']),
       deriveParams: _optionalStringMapDecode(json['deriveParams']),
     );
   }
@@ -577,14 +574,11 @@ class TestRunner<PrivateKey, PublicKey> {
       name,
       generateKeyParams: null, // omit generateKeyParams
       privateRawKeyData: await optionalCall(_exportPrivateRawKey, privateKey),
-      privatePkcs8KeyData:
-          await optionalCall(_exportPrivatePkcs8Key, privateKey),
-      privateJsonWebKeyData:
-          await optionalCall(_exportPrivateJsonWebKey, privateKey),
+      privatePkcs8KeyData: await optionalCall(_exportPrivatePkcs8Key, privateKey),
+      privateJsonWebKeyData: await optionalCall(_exportPrivateJsonWebKey, privateKey),
       publicRawKeyData: await optionalCall(_exportPublicRawKey, publicKey),
       publicSpkiKeyData: await optionalCall(_exportPublicSpkiKey, publicKey),
-      publicJsonWebKeyData:
-          await optionalCall(_exportPublicJsonWebKey, publicKey),
+      publicJsonWebKeyData: await optionalCall(_exportPublicJsonWebKey, publicKey),
       plaintext: plaintext,
       signature: signature,
       ciphertext: ciphertext,
@@ -598,10 +592,7 @@ class TestRunner<PrivateKey, PublicKey> {
 
     // Log the generated test case. This makes it easy to copy/paste the test
     // case into test files.
-    log('| ' +
-        JsonEncoder.withIndent('  ')
-            .convert(c.toJson())
-            .replaceAll('\n', '\n| '));
+    log('| ' + JsonEncoder.withIndent('  ').convert(c.toJson()).replaceAll('\n', '\n| '));
 
     return c.toJson();
   }
@@ -1435,22 +1426,17 @@ void _runTests<PrivateKey, PublicKey>(
     test('validate generated test case', () async {
       Future<T?> optionalCall<S, T>(Future<T> Function(S)? fn, S v) async =>
           fn != null ? await fn(v) : null;
-      final date =
-          DateTime.now().toIso8601String().split('T').first; // drop time
+      final date = DateTime.now().toIso8601String().split('T').first; // drop time
       final generated = _TestCase(
         '${c.name} generated on $detectedRuntime at $date',
         generateKeyParams: null, // omit generateKeyParams
-        privateRawKeyData:
-            await optionalCall(r._exportPrivateRawKey, privateKey!),
-        privatePkcs8KeyData:
-            await optionalCall(r._exportPrivatePkcs8Key, privateKey!),
+        privateRawKeyData: await optionalCall(r._exportPrivateRawKey, privateKey!),
+        privatePkcs8KeyData: await optionalCall(r._exportPrivatePkcs8Key, privateKey!),
         privateJsonWebKeyData:
             await optionalCall(r._exportPrivateJsonWebKey, privateKey!),
         publicRawKeyData: await optionalCall(r._exportPublicRawKey, publicKey!),
-        publicSpkiKeyData:
-            await optionalCall(r._exportPublicSpkiKey, publicKey!),
-        publicJsonWebKeyData:
-            await optionalCall(r._exportPublicJsonWebKey, publicKey!),
+        publicSpkiKeyData: await optionalCall(r._exportPublicSpkiKey, publicKey!),
+        publicJsonWebKeyData: await optionalCall(r._exportPublicJsonWebKey, publicKey!),
         plaintext: c.plaintext,
         signature: signature,
         ciphertext: ciphertext,

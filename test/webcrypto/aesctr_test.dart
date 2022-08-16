@@ -14,7 +14,7 @@
 
 library aesctr_test;
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';
@@ -87,10 +87,7 @@ final _testData = [
     "plaintext": "dXJpcyBxdWlzIG1hdHRpcyBtYXNzYS4gUGhhc2VsbHVzIGNvbnZhbGxp",
     "ciphertext": "LnHSulNxQ6y+Z2rC2g8QQURwQWrI53qMPajfaef3cA0jaL+yAd3syGfz",
     "importKeyParams": {},
-    "encryptDecryptParams": {
-      "counter": "AAEECRAZJDFAUWR5kKnE4Q==",
-      "length": 64
-    }
+    "encryptDecryptParams": {"counter": "AAEECRAZJDFAUWR5kKnE4Q==", "length": 64}
   },
   {
     "name": "A128CTR/64 generated on chrome/linux at 2020-01-19T16:40:46",
@@ -100,15 +97,10 @@ final _testData = [
       "alg": "A128CTR",
       "k": "sx_x9PWRAq-IjUKJOGpDVA"
     },
-    "plaintext":
-        "RXRpYW0gc3VzY2lwaXQgZXN0IHZlbCBoZW5kcmVyaXQgYmxhbmRpdC4gTnVsbGFt",
-    "ciphertext":
-        "LiahUAh0wPHi2GfXs9RjESf7Govs9Rc4EZvJQ1SB1qM/vYdIznBSXHkBUw5SyoM3",
+    "plaintext": "RXRpYW0gc3VzY2lwaXQgZXN0IHZlbCBoZW5kcmVyaXQgYmxhbmRpdC4gTnVsbGFt",
+    "ciphertext": "LiahUAh0wPHi2GfXs9RjESf7Govs9Rc4EZvJQ1SB1qM/vYdIznBSXHkBUw5SyoM3",
     "importKeyParams": {},
-    "encryptDecryptParams": {
-      "counter": "AAEECRAZJDFAUWR5kKnE4Q==",
-      "length": 64
-    }
+    "encryptDecryptParams": {"counter": "AAEECRAZJDFAUWR5kKnE4Q==", "length": 64}
   },
   {
     "name": "A128CTR/64 generated on firefox/linux at 2020-01-19T16:40:51",
@@ -119,13 +111,9 @@ final _testData = [
       "k": "tauul1rFz1pQSzowPHc1Bg"
     },
     "plaintext": "bnQuIEluIGhlbmRyZXJpdCBwb3N1ZXJlIGxhY3VzIHZlbAp2YXJpdXMuIA==",
-    "ciphertext":
-        "Yvs4qLHAvfNP02lurZAX6khEG6YoARHFAvniYkn7olEh9/G21no8a/ksWA==",
+    "ciphertext": "Yvs4qLHAvfNP02lurZAX6khEG6YoARHFAvniYkn7olEh9/G21no8a/ksWA==",
     "importKeyParams": {},
-    "encryptDecryptParams": {
-      "counter": "AAEECRAZJDFAUWR5kKnE4Q==",
-      "length": 64
-    }
+    "encryptDecryptParams": {"counter": "AAEECRAZJDFAUWR5kKnE4Q==", "length": 64}
   },
   {
     "name": "A256CTR/9 generated on boringssl/linux at 2020-01-21T22:27:46",
@@ -172,26 +160,21 @@ final _rolloverTestData = [
       "alg": "A128CTR",
       "k": "mkHLvTc_F5evWm7OAMz1Ag"
     },
-    "plaintext":
-        "cwpjb21tb2RvIGF0IHNpdCBhbWV0IG1pLiBQZWxsZW50ZXNxdWUgdmVoaWN1bGEgbA==",
-    "ciphertext":
-        "74m8tH2wT2MCrtw3Qr5SUTqfOPGUGzIeRnqB8psPFu4eujcjm2VgLv+LuJubZbrdkg==",
+    "plaintext": "cwpjb21tb2RvIGF0IHNpdCBhbWV0IG1pLiBQZWxsZW50ZXNxdWUgdmVoaWN1bGEgbA==",
+    "ciphertext": "74m8tH2wT2MCrtw3Qr5SUTqfOPGUGzIeRnqB8psPFu4eujcjm2VgLv+LuJubZbrdkg==",
     "importKeyParams": {},
     "encryptDecryptParams": {"counter": "/v7+/v7+/v7+/v7+/v7+/g==", "length": 2}
   },
   {
-    "name":
-        "A128CTR/2 counter rollover, generated chrome/linux at 2020-01-21T22:17:15",
+    "name": "A128CTR/2 counter rollover, generated chrome/linux at 2020-01-21T22:17:15",
     "privateRawKeyData": "ge2ewKf9LqaW1SHZnYYKTA==",
     "privateJsonWebKeyData": {
       "kty": "oct",
       "alg": "A128CTR",
       "k": "ge2ewKf9LqaW1SHZnYYKTA"
     },
-    "plaintext":
-        "UHJhZXNlbnQgZmVybWVudHVtIGVyYXQgdml0YWUgbGlndWxhCnByZXRpdW0gaW1wZQ==",
-    "ciphertext":
-        "elVwRCpfN3QT3om7mtNMvBWkPZfgla606PRdlEl529D7W7WDYz486NRVGlUI6qfJ8A==",
+    "plaintext": "UHJhZXNlbnQgZmVybWVudHVtIGVyYXQgdml0YWUgbGlndWxhCnByZXRpdW0gaW1wZQ==",
+    "ciphertext": "elVwRCpfN3QT3om7mtNMvBWkPZfgla606PRdlEl529D7W7WDYz486NRVGlUI6qfJ8A==",
     "importKeyParams": {},
     "encryptDecryptParams": {"counter": "/v7+/v7+/v7+/v7+/v7+/g==", "length": 2}
   },

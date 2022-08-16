@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:webcrypto/webcrypto.dart';
 import '../utils/utils.dart';
 import '../utils/testrunner.dart';
@@ -30,8 +30,7 @@ final runner = TestRunner.asymmetric<EcdsaPrivateKey, EcdsaPublicKey>(
       EcdsaPrivateKey.importPkcs8Key(keyData, curveFromJson(keyImportParams))),
   exportPrivatePkcs8Key: nullOnFirefox((key) => key.exportPkcs8Key()),
   importPrivateJsonWebKey: (jsonWebKeyData, keyImportParams) =>
-      EcdsaPrivateKey.importJsonWebKey(
-          jsonWebKeyData, curveFromJson(keyImportParams)),
+      EcdsaPrivateKey.importJsonWebKey(jsonWebKeyData, curveFromJson(keyImportParams)),
   exportPrivateJsonWebKey: (key) => key.exportJsonWebKey(),
   importPublicRawKey: (keyData, keyImportParams) =>
       EcdsaPublicKey.importRawKey(keyData, curveFromJson(keyImportParams)),
@@ -40,16 +39,13 @@ final runner = TestRunner.asymmetric<EcdsaPrivateKey, EcdsaPublicKey>(
       EcdsaPublicKey.importSpkiKey(keyData, curveFromJson(keyImportParams)),
   exportPublicSpkiKey: (key) => key.exportSpkiKey(),
   importPublicJsonWebKey: (jsonWebKeyData, keyImportParams) =>
-      EcdsaPublicKey.importJsonWebKey(
-          jsonWebKeyData, curveFromJson(keyImportParams)),
+      EcdsaPublicKey.importJsonWebKey(jsonWebKeyData, curveFromJson(keyImportParams)),
   exportPublicJsonWebKey: (key) => key.exportJsonWebKey(),
   generateKeyPair: (generateKeyPairParams) => EcdsaPrivateKey.generateKey(
     curveFromJson(generateKeyPairParams),
   ),
-  signBytes: (key, data, signParams) =>
-      key.signBytes(data, hashFromJson(signParams)),
-  signStream: (key, data, signParams) =>
-      key.signStream(data, hashFromJson(signParams)),
+  signBytes: (key, data, signParams) => key.signBytes(data, hashFromJson(signParams)),
+  signStream: (key, data, signParams) => key.signStream(data, hashFromJson(signParams)),
   verifyBytes: (key, signature, data, verifyParams) =>
       key.verifyBytes(signature, data, hashFromJson(verifyParams)),
   verifyStream: (key, signature, data, verifyParams) =>
